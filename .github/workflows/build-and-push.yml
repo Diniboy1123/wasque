@@ -42,6 +42,7 @@ jobs:
           OWNER=${{ steps.vars.outputs.OWNER_LC }}
           MANIFEST_URL="https://ghcr.io/v2/${OWNER}/wasque/manifests/${VERSION}"
           STATUS=$(curl -s -o /dev/null -w "%{http_code}" \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
             -H "Accept: application/vnd.oci.image.manifest.v1+json" \
             "$MANIFEST_URL")
           if [ "$STATUS" -eq 200 ]; then
