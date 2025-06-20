@@ -14,6 +14,7 @@ Lightweight, unofficial [Docker](https://www.docker.com/) container for the offi
   - [Can I use a paid WARP+ account?](#can-i-use-a-paid-warp-account)
   - [Why was this built?](#why-was-this-built)
   - [Known issues](#known-issues)
+  - [License](#license)
   - [Disclaimer #2](#disclaimer-2)
 
 ## Disclaimer
@@ -71,6 +72,10 @@ I maintain my own unofficial Cloudflare WARP client, [usque](https://github.com/
 - The entrypoint script is hardcoded. To customize behavior, replace the script or use `docker exec -it wasque /bin/sh` to make changes on the fly.
 - The `h2-only` MASQUE fallback doesn’t seem to work. This appears to be a general issue within the official clients; I couldn’t get it working on Android either.
 - If you don't have internet when the container is launched, the container will exit.
+
+## License
+
+The code in this repository is licensed under the [MIT License](LICENSE.md). However keep in mind that the WARP client itself is closed source and proprietary software, so you must comply with its [ToS](https://www.cloudflare.com/website-terms/).
 
 ## Disclaimer #2
 
